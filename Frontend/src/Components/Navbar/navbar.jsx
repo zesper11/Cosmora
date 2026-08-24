@@ -1,7 +1,34 @@
-import React from "react";
+import { Search, User, ShoppingCart } from "lucide-react";
+import "./navbar.css";
+import "../../index.css";
 
-const navbar = () => {
-  return <nav className="navbar"></nav>;
-};
+function Navbar() {
+  return (
+    <nav className="nav-bar">
+      <img src="/logo.png" alt="Cosmora" className="nav-logo" />
 
-export default navbar;
+      <ul className="nav-menu">
+        <li>
+          <a>Home</a>
+        </li>
+        <li>
+          <a>Adults</a>
+        </li>
+        <li>
+          <a>Kids</a>
+        </li>
+        <li>
+          <a>Gadgets</a>
+        </li>
+      </ul>
+
+      <div className="nav-actions">
+        <Search />
+        <User />
+        <ShoppingCart />
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;

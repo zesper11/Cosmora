@@ -5,7 +5,8 @@ import "../../index.css";
 function Navbar() {
   return (
     <nav className="nav-bar">
-      <img src="/logo.png" alt="Cosmora" className="nav-logo" />
+      {/* <img src="/logo.png" alt="Cosmora" className="nav-logo" /> */}
+      <h2>cosmora</h2>
 
       <ul className="nav-menu">
         <li>
@@ -23,9 +24,16 @@ function Navbar() {
       </ul>
 
       <div className="nav-actions">
-        <Search />
-        <User />
-        <ShoppingCart />
+        <div>
+          <Search />
+        </div>
+        <div>
+          <User />
+        </div>
+        <div className="cart-action-btn-holder">
+          <ShoppingCart />
+          <div className="cart-count">9+</div>
+        </div>
       </div>
     </nav>
   );

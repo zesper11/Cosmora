@@ -23,6 +23,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 1.5rem;
 }
 
 .nav-menu li a {
@@ -43,6 +44,33 @@
   display: flex;
   align-items: center;
   gap: 18px;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-actions > div{
+  cursor: pointer;
+}
+
+.cart-action-btn-holder{
+  position: relative;
+  display: flex;
+}
+
+.cart-count{
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: rgb(233, 13, 13);
+  /* font-weight: 900; */
+  color: white;
+  font-size: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
 }
 
 .nav-actions button {
@@ -58,3 +86,4 @@
 .nav-actions button:hover {
   color: var(--primary);
 }
+

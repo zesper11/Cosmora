@@ -1,4 +1,5 @@
 import { Search, User, ShoppingCart } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import "./navbar.css";
 import "../../index.css";
 
@@ -10,16 +11,16 @@ function Navbar() {
 
       <ul className="nav-menu">
         <li>
-          <a>Home</a>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <a>Adults</a>
+          <NavLink to="/adult">Adults</NavLink>
         </li>
         <li>
-          <a>Kids</a>
+          <NavLink to="/kids">Kids</NavLink>
         </li>
         <li>
-          <a>Gadgets</a>
+          <NavLink to="/gadgets">Gadgets</NavLink>
         </li>
       </ul>
 

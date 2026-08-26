@@ -1,20 +1,40 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage.jsx";
-import Navbar from "./Components/Navbar/navbar.jsx";
+import Adult from "./Pages/ShopPage/Adult.jsx";
+import Gadgets from "./Pages/ShopPage/Gadgets.jsx";
+import Kids from "./Pages/ShopPage/Kids.jsx";
+import Layout from "./Layout.jsx";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Homepage> </Homepage>,
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Homepage />,
+        },
+        {
+          path: "/adult",
+          element: <Adult />,
+        },
+        {
+          path: "/gadgets",
+          element: <Gadgets />,
+        },
+        {
+          path: "/kids",
+          element: <Kids />,
+        },
+      ],
     },
   ]);
 
   return (
     <>
-      <Navbar></Navbar>
-      <RouterProvider router={{ router }}></RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
     </>
   );
 };
